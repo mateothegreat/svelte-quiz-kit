@@ -1,0 +1,31 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "target": "es2023",
+    /**
+      Svelte Preprocess cannot figure out whether you have a value or a type, so tell TypeScript
+      to enforce using `import type` instead of `import` for Types.
+     */
+    "verbatimModuleSyntax": true,
+    /**
+      To have warnings/errors of the Svelte compiler at the correct position,
+      enable source maps by default.
+     */
+    "noEmit": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "paths": {
+      "$lib/*": ["./src/lib/*"],
+      "$components/*": ["./src/components/*"],
+      "$ui/*": ["./src/lib/components/ui/*"],
+      "$hooks/*": ["./src/lib/hooks/*"]
+    }
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["**/*test*"]
+}
