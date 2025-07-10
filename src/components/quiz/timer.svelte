@@ -35,9 +35,12 @@
   };
 </script>
 
-<div class={cn("flex items-center gap-2", className)}>
+<div class={cn("flex gap-2 items-center", className)}>
   <Clock class="h-4 w-4" />
-  <span class={`font-mono ${timeRemaining < 60 ? "text-red-600" : ""}`}>
+  <span class={`
+    font-mono
+    ${timeRemaining < 60 ? "text-red-600" : ""}
+  `}>
     {formatTime(timeRemaining)}
   </span>
 </div>

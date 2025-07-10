@@ -1,9 +1,15 @@
 <script lang="ts">
-  import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/card";
-  import { cn } from "$lib/utils";
-  import type { ModalInstance } from "@mateothegreat/svelte5-modal-manager";
-  import QuizCompleted from "./completed.svelte";
-  import QuizControls from "./controls.svelte";
+  import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle
+  } from "$lib/components/ui/card";
+  import { CheckCircle, XCircle } from "lucide-svelte";
+  import Controls from "./controls.svelte";
+  import OptionButton from "./option-button.svelte";
+ntrols.svelte";
   import QuizProgress from "./progress.svelte";
   import QuizQuestion from "./question.svelte";
   import { quiz } from "./quiz";

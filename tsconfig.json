@@ -20,6 +20,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "paths": {
+      "$lib": ["./src/lib"],
       "$lib/*": ["./src/lib/*"],
       "$components/*": ["./src/components/*"],
       "$ui/*": ["./src/lib/components/ui/*"],

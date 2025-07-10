@@ -13,7 +13,7 @@
 </script>
 
 <div class="space-y-2">
-  <div class="text-muted-foreground flex justify-between text-sm">
+  <div class="flex justify-between text-muted-foreground text-sm">
     <span>Question {current} of {total}</span>
     <span>{progress}% Complete</span>
   </div>

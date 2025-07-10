@@ -13,10 +13,10 @@
 </script>
 
 <div
-  class={cn("bg-secondary relative h-4 w-full overflow-hidden rounded-full", className)}
+  class={cn("bg-secondary h-4 overflow-hidden relative rounded-full w-full", className)}
   {...restProps}>
   <div
-    class="bg-primary h-full w-full flex-1 transition-all"
+    class="bg-primary flex-1 h-full transition-all w-full"
     style="transform: translateX(-{100 - percentage}%)">
   </div>
 </div>

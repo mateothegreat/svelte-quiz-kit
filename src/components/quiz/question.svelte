@@ -22,8 +22,8 @@
 </script>
 
 <div class="space-y-4">
-  <div class="flex items-start gap-3">
-    <h3 class="text-lg leading-relaxed font-medium">
+  <div class="flex gap-3 items-start">
+    <h3 class="font-medium leading-relaxed text-lg">
       {question.question}
     </h3>
   </div>
@@ -42,15 +42,15 @@
   </div>
 
   {#if showFeedback}
-    <div class="bg-muted rounded-lg p-4">
-      <div class="flex items-start gap-2">
+    <div class="bg-muted p-4 rounded-lg">
+      <div class="flex gap-2 items-start">
         {#if selectedAnswer === question.correctAnswer}
-          <CheckCircle2 class="mt-0.5 h-5 w-5 text-green-600" />
+          <CheckCircle2 class="h-5 mt-0.5 text-green-600 w-5" />
         {:else}
-          <XCircle class="mt-0.5 h-5 w-5 text-red-600" />
+          <XCircle class="h-5 mt-0.5 text-red-600 w-5" />
         {/if}
         <div>
-          <p class="mb-1 font-medium">
+          <p class="font-medium mb-1">
             {selectedAnswer === question.correctAnswer ? "Correct!" : "Incorrect"}
           </p>
           <p class="text-muted-foreground text-sm">
@@ -63,18 +63,20 @@
 
   {#if question.hint && !showFeedback}
     <div class="flex justify-center">
-      <Button variant="outline" size="sm" onclick={onHintToggle} class="text-xs">
-        <Lightbulb class="mr-1 h-3 w-3" />
+      <Button variant="outline" size="sm" onclick={onHintToggle} class="
+        text-xs
+      ">
+        <Lightbulb class="h-3 mr-1 w-3" />
         {showHint ? "Hide Hint" : "Show Hint"}
       </Button>
     </div>
   {/if}
 
   {#if showHint && question.hint}
-    <div class="rounded-lg border border-blue-200 bg-blue-50 p-3">
-      <div class="flex items-start gap-2">
-        <HelpCircle class="mt-0.5 h-4 w-4 text-blue-600" />
-        <p class="text-sm text-blue-800">{question.hint}</p>
+    <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg">
+      <div class="flex gap-2 items-start">
+        <HelpCircle class="h-4 mt-0.5 text-blue-600 w-4" />
+        <p class="text-blue-800 text-sm">{question.hint}</p>
       </div>
     </div>
   {/if}

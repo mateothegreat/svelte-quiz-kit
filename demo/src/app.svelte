@@ -31,6 +31,6 @@
   });
 </script>
 
-<main class="font-system container mx-auto flex flex-col gap-2 p-6">
+<main class="container flex flex-col font-system gap-2 mx-auto p-6">
   <section class="flex flex-col gap-2"></section>
 </main>

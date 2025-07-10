@@ -12,15 +12,15 @@
   let { children, class: className }: WindowProps = $props();
 </script>
 
-<div class={cn("shadow-glow bg-muted-background aspect-video w-full rounded-xl", className)}>
+<div class={cn("aspect-video bg-muted-background rounded-xl shadow-glow w-full", className)}>
   <div class="border-b border-inherit p-4">
-    <div class="flex items-center gap-2">
-      <div class="size-2 rounded-full bg-[#ef4444]"></div>
-      <div class="size-2 rounded-full bg-[#eab308]"></div>
-      <div class="size-2 rounded-full bg-[#22c55e]"></div>
+    <div class="flex gap-2 items-center">
+      <div class="bg-[#ef4444] rounded-full size-2"></div>
+      <div class="bg-[#eab308] rounded-full size-2"></div>
+      <div class="bg-[#22c55e] rounded-full size-2"></div>
     </div>
   </div>
-  <div class="bg-zinc-900/25 w-full h-full overflow-auto">
+  <div class="bg-zinc-900/25 h-full overflow-auto w-full">
     {@render children?.()}
   </div>
 </div>
